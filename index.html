@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<meta charset="UTF-8" />
+<meta content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5"
+  name="viewport" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta name="description" content="Birthday wish">
+  <meta name="author" content="">
+  <meta name="keywords" content="Birthday, Love, Heart, Romance, Surprise">
+  <meta property="og:title" content="Birthday Surprise">
+  <meta property="og:description" content="A sweet surprise by GITANSHU.WORLD, hope you like it.">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+  <script src="https://cdn.counter.dev/script.js" data-id="94230eda-4928-4c49-86ab-d01d458f3ae2" data-utcoffset="5"></script>
+<head>
+  <title>Happy Birthday</title>
+  <meta name="google" content="notranslate">
+</head>
+<body>
+  <div id="hearts"></div>
+  <audio src="https://cdn.jsdelivr.net/gh/pocoworld/bg@main/hbd.mp3" id="linkmp3" class="sembunyi"></audio>
+  <div id="bodyblur">
+    <img src="./assets/bg.png" id="wallpaper" />
+    <div id="beneranblur"></div>
+  </div>
+  <div id="Content">
+    <div id="kadoIn">
+    <img src="./assets/box.png"/>
+    </div>
+    <p id="ket">🎀 Surprise Surprise 🎀</p>
+    <p id="ket"></p>
+    <div class="kumpulanstiker">
+      <img src="./assets/1.gif" id="fotostiker" />
+      <img src="./assets/2.gif" id="fotostiker1" />
+      <img src="./assets/3.gif" id="fotostiker2" />
+      <img src="./assets/4.gif" id="fotostiker3" />
+      <img src="./assets/5.gif" id="fotostiker4" />
+      <img src="./assets/6.gif" id="fotostiker5" />
+      <img src="./assets/7.gif" id="fotostiker6" />
+    </div>
+    <p id="halo" class="halo"></p>
+    <div>
+      <blockquote id="bq" data-text="">
+        <p id="kalimat">I have something for you!..😃🤗</p>
+        <p id="pesan1">Blow the candles 😘</p>
+        <div id="kolombaru">
+          <li id="lv1">🕯</li>
+          <li id="lv2">🕯</li>
+          <li id="lv3">🕯</li>
+          <li id="lv4">🕯</li>
+        </div>
+        <p id="pesan2">Wait...</p>
+        <p id="pesan3">Someone has a birthday today! 🤣❤️</p>
+        <p id="pesan4">Happy Birthdayy..!! </p>
+        <p id="pesan5" class="gaya2">You're getting older, hehe🤭🤭</p>
+        <p id="pesan6" class="gaya2">
+          Hope you have a long life so you can treat me every year! 😆❤️
+        </p>
+        <p id="pesan7" class="gaya2">Just kidding!</p>
+        <p id="pesan8" class="gaya2">Stay healthy!</p>
+        <p id="pesan9" class="gaya2">
+          Oh yeah, on this special day, I hope you become a better person!. 🥳❤️
+        </p>
+        <p id="pesan10" class="gaya2">Happy Birthday once again!! 🥳</p>
+        <p id="opsL">>Click to Continue</p>
+      </blockquote>
+    </div>
+    <div id="Tombol"><a id="By">&#128140; Continue</a></div>
+    <p id="katatambahan" class="sembunyi">
+      Pehle Party dey...😂
+    </p>
+    <div id="pesanditolak">
+      <img id="stikerditolak" src="./assets/8.gif" />
+      <p id="kataditolak">Vaise bhi party ke pehle no gift😜</p>
+    </div>
+  </div>
+  <script>
+    const body = document.querySelector("body");
+    const swalst = Swal.mixin({
+      timer: 2300,
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      timerProgressBar: true,
+      imageHeight: 90,
+    });
+    audio = new Audio("" + linkmp3.src);
+    ftganti = 0;
+    fungsi = 0;
+    fungsiAwal = 0;
+    deffotostiker = fotostiker.src;
+    function berjatuhan() {
+      const heart = document.createElement("div");
+      heart.className = "fas fa-snowflake";
+      heart.style.left = Math.random() * 90 + "vw";
+      heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+      body.appendChild(heart);
+    }
+    setInterval(function name(params) {
+      var heartArr = document.querySelectorAll(".fa-snowflake");
+      if (heartArr.length > 100) {
+        heartArr[0].remove();
+      }
+    }, 100);
+    Content.style = "opacity:1;margin-top:16vh";
+    const swals = Swal.mixin({
+      allowOutsideClick: false,
+      cancelButtonColor: "#FF0040",
+      imageHeight: 80,
+    });
+    document.getElementById("kadoIn").onclick = function () {
+      if (fungsiAwal == 0) {
+        audio.play();
+        fungsiAwal = 1;
+        kadoIn.style =
+          "transition:all .8s ease;transform:scale(10);opacity:0";
+        wallpaper.style = "transform: scale(1.5);";
+        ket.style = "display:none";
+        setTimeout(initengahan, 300);
+        setTimeout(inipesan, 500);
+      }
+    };
+     async function inipesan() {
+  window.nama = "Motko 🥰🤗💞"; 
+  vketikhalo = "Hii, Cutiipiee😘😘";
+  mulainama();
+}
+    var tanya = "do you want a gift? 😶❤️";
+    var opstanya = "Come on.. take it! 😆";
+    var tompositif = "Dedoo";
+    var tomnegatif = "Nahi chahiye";
+    async function menuju() {
+      await swals.fire("ENJOY YOUR DAY 🥰🤗");
+      
+    }
+  </script>
+
+  <script src="./script.js"></script>
+  
+</body>
+</html>
