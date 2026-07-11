@@ -514,3 +514,281 @@ blockquote > #opsL {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+
+.loveFloat{
+
+position:fixed;
+
+bottom:-50px;
+
+pointer-events:none;
+
+z-index:999;
+
+animation:loveUp linear forwards;
+
+filter:drop-shadow(0 0 8px pink);
+
+}
+
+@keyframes loveUp{
+
+0%{
+
+transform:translateY(0) rotate(0deg) scale(.5);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:1;
+
+}
+
+50%{
+
+transform:translateY(-45vh) rotate(180deg) scale(1.2);
+
+}
+
+100%{
+
+transform:translateY(-110vh) rotate(360deg) scale(.7);
+
+opacity:0;
+
+}
+
+}
+
+
+/* ========================= */
+/* Floating Hearts */
+/* ========================= */
+
+.loveFloat{
+    position: fixed;
+    bottom: -50px;
+    pointer-events: none;
+    z-index: 999;
+    animation: loveUp linear forwards;
+    filter: drop-shadow(0 0 8px pink);
+}
+
+@keyframes loveUp{
+
+    0%{
+        transform: translateY(0) rotate(0deg) scale(.5);
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    50%{
+        transform: translateY(-45vh) rotate(180deg) scale(1.2);
+    }
+
+    100%{
+        transform: translateY(-110vh) rotate(360deg) scale(.7);
+        opacity:0;
+    }
+
+}
+
+
+/* ========================= */
+/* Rose Petals */
+/* ========================= */
+
+.petal{
+
+    position:fixed;
+
+    top:-50px;
+
+    pointer-events:none;
+
+    z-index:998;
+
+    animation:petalFall linear forwards;
+
+}
+
+@keyframes petalFall{
+
+    0%{
+
+        transform:translateY(-10vh) rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:translateY(50vh) translateX(40px) rotate(180deg);
+
+    }
+
+    100%{
+
+        transform:translateY(110vh) translateX(-40px) rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* ========================= */
+/* Fireworks */
+/* ========================= */
+
+.spark{
+
+    position:fixed;
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    animation:explode 1.5s forwards;
+
+    z-index:9999;
+
+}
+
+@keyframes explode{
+
+    0%{
+
+        transform:translate(0,0) scale(1);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translate(var(--x),var(--y)) scale(.2);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* ========================= */
+/* Confetti */
+/* ========================= */
+
+.confetti{
+
+    position:fixed;
+
+    top:-20px;
+
+    width:10px;
+
+    height:18px;
+
+    animation:confettiFall linear 6s;
+
+    z-index:999;
+
+}
+
+@keyframes confettiFall{
+
+    0%{
+
+        transform:translateY(0) rotate(0deg);
+
+    }
+
+    100%{
+
+        transform:translateY(110vh) rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
+
+#profileContainer{
+    display:flex;
+    justify-content:center;
+    margin:15px 0 25px;
+}
+
+#profileImage{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    box-shadow:0 0 25px rgba(255,255,255,.7);
+    animation:profileGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes profileGlow{
+    0%{
+        transform:scale(1);
+        box-shadow:0 0 15px rgba(255,105,180,.5);
+    }
+    50%{
+        transform:scale(1.06);
+        box-shadow:0 0 35px rgba(255,105,180,1);
+    }
+    100%{
+        transform:scale(1);
+        box-shadow:0 0 15px rgba(255,105,180,.5);
+    }
+}
+
+
+
+.floatingProfile{
+    position:fixed;
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid white;
+    box-shadow:0 0 20px rgba(255,105,180,.8);
+    pointer-events:none;
+    z-index:1;
+    animation:floatProfile linear infinite;
+    opacity:.75;
+}
+
+@keyframes floatProfile{
+
+    0%{
+        transform:translateY(110vh) rotate(0deg) scale(.8);
+        opacity:0;
+    }
+
+    10%{
+        opacity:.8;
+    }
+
+    50%{
+        transform:translateY(50vh) translateX(60px) rotate(180deg) scale(1);
+    }
+
+    100%{
+        transform:translateY(-120px) translateX(-60px) rotate(360deg) scale(.9);
+        opacity:0;
+    }
+
+}

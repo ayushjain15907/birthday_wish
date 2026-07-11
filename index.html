@@ -26,6 +26,9 @@
 <body>
   <div id="hearts"></div>
   <audio src="https://cdn.jsdelivr.net/gh/pocoworld/bg@main/hbd.mp3" id="linkmp3" class="sembunyi"></audio>
+  <audio id="bgMusic" loop class="sembunyi">
+    <source src="./assets/birthday_song.mp3" type="audio/mpeg">
+</audio>
   <div id="bodyblur">
     <img src="./assets/bg.png" id="wallpaper" />
     <div id="beneranblur"></div>
@@ -34,7 +37,7 @@
     <div id="kadoIn">
     <img src="./assets/box.png"/>
     </div>
-    <p id="ket">🎀 Surprise Surprise 🎀</p>
+    <p id="ket">🎀From My Heart To Yours 💌🎀</p>
     <p id="ket"></p>
     <div class="kumpulanstiker">
       <img src="./assets/1.gif" id="fotostiker" />
@@ -46,35 +49,38 @@
       <img src="./assets/7.gif" id="fotostiker6" />
     </div>
     <p id="halo" class="halo"></p>
+    <div id="profileContainer">
+    <img src="./assets/profile_image.jpeg" alt="Profile" id="profileImage">
+</div>
     <div>
       <blockquote id="bq" data-text="">
-        <p id="kalimat">I have something for you!..😃🤗</p>
-        <p id="pesan1">Blow the candles 😘</p>
+        <p id="kalimat">I have a little surprise just for you... 🎁💕</p>
+        <p id="pesan1">Make a beautiful wish and blow the candles... 🕯️🎂💖</p>
         <div id="kolombaru">
           <li id="lv1">🕯</li>
           <li id="lv2">🕯</li>
           <li id="lv3">🕯</li>
           <li id="lv4">🕯</li>
         </div>
-        <p id="pesan2">Wait...</p>
-        <p id="pesan3">Someone has a birthday today! 🤣❤️</p>
-        <p id="pesan4">Happy Birthdayy..!! </p>
+        <p id="pesan2">Just a second... something special is coming... ✨💞</p>
+        <p id="pesan3">Today is all about the most precious person in my life... ❤️🌹</p>
+        <p id="pesan4">Happy Birthday, My Sunshine! 🎂🥳❤️🌸 </p>
         <p id="pesan5" class="gaya2">You're getting older, hehe🤭🤭</p>
         <p id="pesan6" class="gaya2">
           Hope you have a long life so you can treat me every year! 😆❤️
         </p>
         <p id="pesan7" class="gaya2">Just kidding!</p>
-        <p id="pesan8" class="gaya2">Stay healthy!</p>
+        <p id="pesan8" class="gaya2">Stay happy, stay healthy, and never stop being the amazing person you are. 🌸💖🫶</p>
         <p id="pesan9" class="gaya2">
-          Oh yeah, on this special day, I hope you become a better person!. 🥳❤️
+          On this special day, I just want you to stay happy, because your smile means everything to me. ❤️🥳
         </p>
         <p id="pesan10" class="gaya2">Happy Birthday once again!! 🥳</p>
-        <p id="opsL">>Click to Continue</p>
+        <p id="opsL">👉 Tap here for one last surprise 💌✨</p>
       </blockquote>
     </div>
     <div id="Tombol"><a id="By">&#128140; Continue</a></div>
     <p id="katatambahan" class="sembunyi">
-      Pehle Party dey...😂
+      phle ek tight hug toh banti hai... 🫂🤗❤️🫂
     </p>
     <div id="pesanditolak">
       <img id="stikerditolak" src="./assets/8.gif" />
@@ -90,18 +96,153 @@
       timerProgressBar: true,
       imageHeight: 90,
     });
-    audio = new Audio("" + linkmp3.src);
+    const audio = new Audio(linkmp3.src);
+const bgMusic = document.getElementById("bgMusic");
+
+// Background music volume (0 to 1)
+  bgMusic.volume = 0.05;
+
+// Birthday song volume
+    audio.volume = 0.50;
     ftganti = 0;
     fungsi = 0;
     fungsiAwal = 0;
     deffotostiker = fotostiker.src;
     function berjatuhan() {
-      const heart = document.createElement("div");
-      heart.className = "fas fa-snowflake";
-      heart.style.left = Math.random() * 90 + "vw";
-      heart.style.animationDuration = Math.random() * 3 + 2 + "s";
-      body.appendChild(heart);
+
+    const items = ["❤️","💖","💕","💗","💞","💘","💓"];
+
+    const heart = document.createElement("div");
+
+    heart.className = "loveFloat";
+
+    heart.innerHTML = items[Math.floor(Math.random()*items.length)];
+
+    heart.style.left = Math.random()*100 + "vw";
+
+    heart.style.fontSize = (18 + Math.random()*22) + "px";
+
+    heart.style.animationDuration = (5 + Math.random()*5) + "s";
+
+    heart.style.transform = `rotate(${Math.random()*360}deg)`;
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },9000);
+
+}
+
+// 🌸 Falling Rose Petals
+function createPetal(){
+
+    const petals=["🌸","🌺","🌷","🌹"];
+
+    const petal=document.createElement("div");
+
+    petal.className="petal";
+
+    petal.innerHTML=petals[Math.floor(Math.random()*petals.length)];
+
+    petal.style.left=Math.random()*100+"vw";
+
+    petal.style.fontSize=(18+Math.random()*18)+"px";
+
+    petal.style.animationDuration=(6+Math.random()*5)+"s";
+
+    petal.style.animationDelay=Math.random()*2+"s";
+
+    document.body.appendChild(petal);
+
+    setTimeout(()=>{
+        petal.remove();
+    },12000);
+
+}
+
+// 🎆 Fireworks
+function firework(){
+
+    for(let i=0;i<35;i++){
+
+        const spark=document.createElement("div");
+
+        spark.className="spark";
+
+        spark.style.left="50vw";
+
+        spark.style.top="45vh";
+
+        spark.style.setProperty("--x",(Math.random()-0.5)*400+"px");
+
+        spark.style.setProperty("--y",(Math.random()-0.5)*400+"px");
+
+        spark.style.background=`hsl(${Math.random()*360},100%,60%)`;
+
+        document.body.appendChild(spark);
+
+        setTimeout(()=>{
+            spark.remove();
+        },1500);
+
     }
+
+}
+
+// 🎉 Confetti
+function confetti(){
+
+    const colors=["#ff4d6d","#ffbe0b","#3a86ff","#fb5607","#8338ec"];
+
+    const c=document.createElement("div");
+
+    c.className="confetti";
+
+    c.style.left=Math.random()*100+"vw";
+
+    c.style.background=colors[Math.floor(Math.random()*colors.length)];
+
+    c.style.transform=`rotate(${Math.random()*360}deg)`;
+
+    document.body.appendChild(c);
+
+    setTimeout(()=>{
+        c.remove();
+    },7000);
+
+}
+const profileImages = [
+    "./assets/profile_image1.jpeg",
+    "./assets/profile_image2.jpeg",
+    "./assets/profile_image3.jpeg",
+    "./assets/profile_image4.jpeg"
+];
+
+function floatingProfile(){
+
+    const img=document.createElement("img");
+
+    img.src=profileImages[Math.floor(Math.random()*profileImages.length)];
+
+    img.className="floatingProfile";
+
+    img.style.left=Math.random()*90+"vw";
+
+    img.style.width=(70+Math.random()*50)+"px";
+    img.style.height=img.style.width;
+
+    img.style.animationDuration=(10+Math.random()*8)+"s";
+
+    document.body.appendChild(img);
+
+    setTimeout(()=>{
+        img.remove();
+    },18000);
+
+}
+
+setInterval(floatingProfile,2500);
     setInterval(function name(params) {
       var heartArr = document.querySelectorAll(".fa-snowflake");
       if (heartArr.length > 100) {
@@ -115,20 +256,26 @@
       imageHeight: 80,
     });
     document.getElementById("kadoIn").onclick = function () {
-      if (fungsiAwal == 0) {
-        audio.play();
-        fungsiAwal = 1;
-        kadoIn.style =
-          "transition:all .8s ease;transform:scale(10);opacity:0";
-        wallpaper.style = "transform: scale(1.5);";
-        ket.style = "display:none";
-        setTimeout(initengahan, 300);
-        setTimeout(inipesan, 500);
-      }
-    };
+  if (fungsiAwal == 0) {
+
+    // Play both songs
+    audio.play();      // Original birthday song
+    bgMusic.play();    // Background romantic song
+
+    fungsiAwal = 1;
+
+    kadoIn.style =
+      "transition:all .8s ease;transform:scale(10);opacity:0";
+    wallpaper.style = "transform: scale(1.5);";
+    ket.style = "display:none";
+
+    setTimeout(initengahan, 300);
+    setTimeout(inipesan, 500);
+  }
+};
      async function inipesan() {
   window.nama = "Motko 🥰🤗💞"; 
-  vketikhalo = "Hii, Cutiipiee😘😘";
+  vketikhalo = "Oyy Meri Noni😘😘";
   mulainama();
 }
     var tanya = "do you want a gift? 😶❤️";

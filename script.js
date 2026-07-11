@@ -360,11 +360,29 @@ document.getElementById("lv4").onclick = function () {
 };
 var slov = 0x0;
 function checkslov() {
-  if (slov == 0x4) {
-    kolombaru.style = "position:relative;transform:scale(1)";
-    otomatis();
-    setTimeout(aktipesan2, 0x190);
-  }
+
+    if (slov == 4) {
+
+        kolombaru.style="position:relative;transform:scale(1)";
+
+        firework();
+
+        setTimeout(firework,600);
+
+        setTimeout(firework,1200);
+
+        setInterval(confetti,120);
+
+        setInterval(berjatuhan,250);
+
+        setInterval(createPetal,400);
+
+        otomatis();
+
+        setTimeout(aktipesan2,400);
+
+    }
+
 }
 async function pertanyaan() {
   var {
